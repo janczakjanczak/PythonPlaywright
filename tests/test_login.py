@@ -22,11 +22,13 @@ def test_homepage(page: Page):
     # Expects the URL to contain intro.
     expect(page).to_have_url(re.compile(".*intro"))
 
+
 def test_search(page: Page):
     search_page = SearchPage(page)
     search_page.navigate()
     search_page.search("search query")
-        
+
+
 def test_new(page: Page):
     google_page = GooglePage(page)
     google_page.start_button.click()

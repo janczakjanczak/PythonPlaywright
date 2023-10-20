@@ -1,11 +1,8 @@
 class SearchPage:
     def __init__(self, page):
         self.page = page
-        self.search_term_input = page.locator('[aria-label="Enter your search term"]')
+        self.search_term_input = page.locator("//textarea[@title='Szukaj']")
 
-    def navigate(self):
-        self.page.goto("https://bing.com")
-
-    def search(self, text):
+    def search(self, text:str):
         self.search_term_input.fill(text)
         self.search_term_input.press("Enter")
