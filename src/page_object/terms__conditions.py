@@ -6,9 +6,7 @@ class TermsConditions:
         self.page = page
         self.acceptAllButton = page.locator("//div[text()='Zaakceptuj wszystko']")
         self.rejectAllButton = page.locator("//div[text()='Odrzuć wszystko']")
-        self.termsMainHeader = page.locator(
-            "//h1[text()='Zanim przejdziesz do Google']"
-        )
+        self.termsMainHeader = page.locator("//h1[text()='Zanim przejdziesz do Google']")
 
     def navigate(self):
         self.page.goto("https://www.google.com/")

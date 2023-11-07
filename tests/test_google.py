@@ -14,7 +14,8 @@ def test_if_we_can_accept_all_conditions(page: Page):
 def test_if_we_can_change_language(page: Page):
     trms = TermsConditions(page)
     trms.navigate()
-    trms.changeLanguage()
+    language = ChangeLanguage(page)
+    language.changeLanguage()
 
 
 def test_search_phrase(page: Page):
